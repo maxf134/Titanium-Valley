@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="icon" href="data:," />
+  <title>Титановая долина — Виртуальная карта</title>
+</head>
+<body>
+
+<div id="game-root"></div>
+
+<div id="hud" class="hidden">
+  <div id="achievement-counter">
+    <span class="star">★</span>
+    <span>Открыто <b id="ach-done">0</b> из <b id="ach-total">0</b></span>
+  </div>
+
+  <div id="zone-badge"></div>
+
+  <div id="interact-hint" class="hidden">
+    <span class="key">E</span>
+    <span id="interact-text">Взаимодействовать</span>
+  </div>
+
+  <div id="dialog" class="hidden">
+    <div class="dialog-name" id="dialog-name"></div>
+    <div class="dialog-text" id="dialog-text"></div>
+    <div class="dialog-actions">
+      <button id="dialog-next">Далее</button>
+      <button id="dialog-close">Закрыть</button>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <button id="btn-interact-mobile" class="hidden">Действие</button>
+
+  <div id="joystick" class="hidden">
+    <div id="joystick-base"><div id="joystick-knob"></div></div>
+  </div>
+
+  <div id="camera-hint">Зажмите и тяните — поворот камеры · Колесо — зум · E — действие</div>
+</div>
+
+<div id="start-screen">
+  <div class="start-card">
+    <h1>Титановая долина</h1>
+    <p class="subtitle">Виртуальная экскурсия по четырём площадкам особой экономической зоны</p>
+
+    <div class="zones-preview">
+      <div class="zone-chip" style="--c:#E89B3C">Верхняя Салда</div>
+      <div class="zone-chip" style="--c:#D94F5C">Алапаевск</div>
+      <div class="zone-chip" style="--c:#4CAF50">Патруши</div>
+      <div class="zone-chip" style="--c:#4A90D9">Уктус</div>
+    </div>
+
+    <div class="controls-grid" id="controls-desktop">
+      <div class="ctrl">
+        <div class="keys"><span>W</span><span>A</span><span>S</span><span>D</span></div>
+        <div class="desc">Движение персонажа</div>
+      </div>
+      <div class="ctrl">
+        <div class="keys"><span>Мышь</span></div>
+        <div class="desc">Зажать ЛКМ и тянуть — поворот камеры</div>
+      </div>
+      <div class="ctrl">
+        <div class="keys"><span>Колесо</span></div>
+        <div class="desc">Приближение / отдаление</div>
+      </div>
+      <div class="ctrl">
+        <div class="keys"><span>E</span></div>
+        <div class="desc">Поговорить / дёрнуть рычаг</div>
+      </div>
+      <div class="ctrl">
+        <div class="keys"><span>Shift</span></div>
+        <div class="desc">Бег</div>
+      </div>
+      <div class="ctrl">
+        <div class="keys"><span>Space</span></div>
+        <div class="desc">Прыжок</div>
+      </div>
+    </div>
+
+    <div class="controls-grid" id="controls-mobile">
+      <div class="ctrl">
+        <div class="keys"><span>◐ Джойстик</span></div>
+        <div class="desc">Левая часть экрана — движение персонажа</div>
+      </div>
+      <div class="ctrl">
+        <div class="keys"><span>☝ Свайп</span></div>
+        <div class="desc">Правая часть экрана — поворот камеры</div>
+      </div>
+      <div class="ctrl">
+        <div class="keys"><span>⊕ Действие</span></div>
+        <div class="desc">Кнопка в правом нижнем углу — взаимодействие</div>
+      </div>
+    </div>
+
+    <button id="btn-start">Начать экскурсию</button>
+    <p class="goal">Цель: обойти все 4 площадки, поговорить с работниками и активировать все рычаги.</p>
+  </div>
+</div>
+
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>
